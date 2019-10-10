@@ -1,0 +1,69 @@
+.calendar__container {
+  position: relative;
+  display: inline-block;
+  padding: 25px 20px;
+  box-shadow: 0 0 10px 0 lightgray;
+  user-select: none;
+}
+.calendar__cntrl {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+.cntrl-btn__container {
+  background-color: #f7f8fc;
+  border-radius: 50%;
+}
+.calendar__cntrl-btns {
+  display: flex;
+}
+.cntrl-btn__container,
+.calendar__cntrl-btn {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.calendar__cntrl-btn {
+  color: #dbdde7;
+}
+.cntrl-btn__container:not(:first-of-type){
+  margin-left: 10px;
+}
+.calendar__weekdays {
+  margin-top: 10px;
+}
+.calendar__week-row {
+  display: flex;
+}
+.calendar__cell-container,
+.calendar__cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calendar__cell-container {
+  width: 40px;
+  height: 30px;
+
+}
+.calendar__cell {
+  width: 30px;
+  height: 30px;
+}
+.calendar__cell.has-events {
+  color: #ba2c33;
+}
+.calendar__cell.not-active-month {
+  color: #e2e6e9;
+}
+.calendar__cell.is-active-day {
+  color: white;
+  background-color: #69d8ff;
+  border-radius: 50%;
+}
+.calendar__day {
+  cursor: pointer;
+}

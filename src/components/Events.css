@@ -1,0 +1,39 @@
+.events__container {
+    min-width: 300px;
+    min-height: 210px;
+    padding: 25px;
+    box-shadow: 0 0 10px 0 lightgray;
+}
+.events__list {
+    margin-top: 10px;
+}
+.events__item {
+    display: flex;
+}
+.events__editor {
+    margin-top: 15px;
+}
+.events__btns-container {
+    margin-top: 20px;
+}
+
+.event__name {
+    margin-left: 5px;
+}
+.event__time-input {
+    width: 40px;
+}
+.event__text-input {
+    min-width: 150px;
+    margin-left: 15px;
+}
+
+.btn{
+    padding: 10px 25px;
+    color: white;
+    background-color: #69d8ff;
+    border-radius: 5px;
+}
+.events__btns-container .btn:nth-of-type(even){
+    margin-left: 25px;
+}

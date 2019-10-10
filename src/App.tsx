@@ -1,16 +1,28 @@
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld';
+import {Component, Vue} from 'vue-property-decorator';
+import Calendar from '@/components/Calendar';
+import Events from '@/components/Events';
 
 import './App.css'
 
 @Component
 export default class App extends Vue {
-  render() {
-    return (
-      <div id="app">
-        <img alt="Vue logo" src={require('./assets/logo.png')} />
-        <HelloWorld msg1="Welcome to Your Vue.js + TypeScript App"/>
-      </div>
-    )
-  }
+    public components = [
+        Calendar,
+        Events,
+    ];
+
+    render() {
+        return (
+            <div id="app" class={'app-container'}>
+                <Calendar/>
+                {(() => {
+                    if (this.$store.state.activeDate) {
+                        return (<Events class={'events-editor'}/>);
+                    }
+
+                })()}
+
+            </div>
+        )
+    }
 }
